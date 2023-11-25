@@ -18,7 +18,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  web-ui-automation:
     runs-on: ubuntu-latest
 
     # setup repo
@@ -49,3 +49,19 @@ jobs:
     # Execute gradle command for running cucumber test
     - name: Execute Cucumber Test
       run: ./gradlew testCucumber
+
+    # Archive Test Result 
+    - name: Archive Test Result
+      uses: actions/upload-artifact@v3.1.3
+      if: always()
+      with: 
+          name: Cucumber test
+          path: reports
+
+    # Deploy to GitHub Pages 
+    - name: GitHub Pages action
+      if: always()
+      uses: peaceiris/actions-gh-pages@v3.9.3
+      with:
+          personal_token: ${{secrets.GITHUB_TOKEN}}
+          publish_dir: reports
