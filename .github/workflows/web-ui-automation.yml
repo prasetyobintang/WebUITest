@@ -59,9 +59,9 @@ jobs:
           path: reports
 
     # Deploy to GitHub Pages 
-    - name: GitHub Pages action
+    - name: Deploy report to Github Pages
       if: always()
       uses: peaceiris/actions-gh-pages@v3.9.3
       with:
-          personal_token: ${{secrets.GITHUB_TOKEN}}
-          publish_dir: reports
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_DIR: reports
