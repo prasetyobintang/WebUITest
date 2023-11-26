@@ -65,4 +65,4 @@ jobs:
      
       with:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PUBLISH_DIR: reports
+        PUBLISH_DIR: test-result
