@@ -19,7 +19,7 @@ permissions:
 
 jobs:
   web-ui-automation:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     # setup repo
     steps:
