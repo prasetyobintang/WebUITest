@@ -6,6 +6,8 @@
 
 ![image](https://github.com/prasetyobintang/WebUITest/assets/84533163/911d383b-985f-4b4b-b13b-ed10e46edd33)
 
+![img_2.png](img_2.png)
+
 Buat kerangka pengujian UI Web menggunakan Cucumber, Java, Gradle, Selenium
 
 Untuk menyelesaikan tugas ini, Anda perlu melakukan hal berikut:
