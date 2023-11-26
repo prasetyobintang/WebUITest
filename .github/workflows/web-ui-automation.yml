@@ -32,7 +32,7 @@ jobs:
       
     # Execute gradle command for running cucumber test
     - name: Execute Test
-      run: ./gradlew cucumber
+      run: ./gradlew testCucumber
 
     # Archive Test Result
     - name: Archive Test Result
