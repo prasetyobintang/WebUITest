@@ -1,54 +1,38 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-# This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle
-
-name: Web UI Automation Test
+name: Web Automation Workflow
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
   workflow_dispatch:
-  
-permissions:
-  contents: read
 
 jobs:
-  web-ui-automation:
+  run-automation-test:
     runs-on: ubuntu-latest
 
-    # setup repo
     steps:
+    # download repo
     - uses: actions/checkout@v3
-
+    
     # setup java
-    - name: Set up JDK 19
+    - name: Set up JDK 11
       uses: actions/setup-java@v3
       with:
-        java-version: '19'
+        java-version: '11'
         distribution: 'temurin'
-
-    
-    # - name: Build with Gradle
-    #   uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
-    #   with:
-    #     arguments: build
-
-    # setup browser
+        
+    # install chrome browser
     - name: Setup Chrome
-      uses: browser-actions/setup-chrome@v1.3.0
-
-    # setup gradlew
+      uses: browser-actions/setup-chrome@v0.0.0
+      
+    # setup graldew
     - name: Setup gradlew
-      run: chmod +x gradlew
-
+      run: chmod +x gradlew 
+      
     # Execute gradle command for running cucumber test
-    - name: Execute Cucumber Test
-      run: ./gradlew testCucumber
+    - name: Execute Test
+      run: ./gradlew cucumber
 
     # Archive Test Result
     - name: Archive Test Result
@@ -60,8 +44,9 @@ jobs:
       
     # Deploy to Github Pages
     - name: Deploy report to Github Pages
-      if: success()
+      if: always()
       uses: peaceiris/actions-gh-pages@v3.7.3
       with:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PUBLISH_DIR: reports
+    
