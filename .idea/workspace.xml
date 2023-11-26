@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0453e197-f043-4919-ac2b-1e6501faed7d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/cucumber.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/test-result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pb/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pb/CucumberTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="0453e197-f043-4919-ac2b-1e6501faed7d" name="Changes" comment="update report name: html, json" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -217,9 +209,20 @@
       <option name="presentableId" value="Default" />
       <updated>1700727393416</updated>
     </task>
+    <task id="LOCAL-00001" summary="update report name: html, json">
+      <option name="closed" value="true" />
+      <created>1700973564886</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700973564886</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="update report name: html, json" />
+    <option name="LAST_COMMIT_MESSAGE" value="update report name: html, json" />
   </component>
 </project>
