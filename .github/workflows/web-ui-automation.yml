@@ -50,7 +50,7 @@ jobs:
       if: always()
       uses: peaceiris/actions-gh-pages@v3.7.3
       with:
-        PERSONAL_TOKEN: ${{ secrets.GH_TOKEN }}
+        PERSONAL_TOKEN: ${{ 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 }}
         PUBLISH_DIR: reports
         
     # - name: Build with Gradle
