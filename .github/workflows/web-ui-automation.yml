@@ -19,7 +19,7 @@ permissions:
 
 jobs:
   web-ui-automation:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     # setup repo
     steps:
@@ -60,9 +60,8 @@ jobs:
       
     # Deploy to Github Pages
     - name: Deploy report to Github Pages
-      uses: peaceiris/actions-gh-pages@v3.7.3
       if: always()
-     
+      uses: peaceiris/actions-gh-pages@v3.7.3
       with:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PUBLISH_DIR: test-result
